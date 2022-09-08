@@ -1,0 +1,223 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.textarea { /* for all text* area elements */
+    resize: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+body{
+    background-color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    max-width: 800px;
+    margin: 10px auto;
+}
+#upper-section,#lower-section{
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 120px;
+    max-height: fit-content;
+}
+h5,h6{
+    font-weight: 600;
+    margin: 0;
+}
+select{
+    padding: 0 10px 5px;
+    border: none;
+    width: 98%;
+    font-size: 14px;
+    cursor: pointer;
+}
+select:focus{
+    outline: none;
+}
+#dropdown p,#account p{
+    margin: 0;
+    font-size: 12px;
+    padding: 0 12px;
+    height: 15px;
+    color: #888;
+}
+#middle-section{
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 120px;
+    max-height: fit-content;
+}
+a{
+    color: #888;
+    font-size: 14px;
+}
+a:hover{
+    text-decoration: none;
+}
+#middle-section p{
+    width: 90%;
+    font-size: 14px;
+}
+.income{
+    width: 25%;
+}
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #21bf73;
+}
+.options{
+    position: relative;
+    padding: 8px 10px 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.option{
+    position: relative;
+    padding-left: 40px;
+}
+.options label{
+    display: block;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+}
+.option input{
+    opacity: 0;
+}
+.checkmark {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.option input:checked ~ .checkmark:after {
+    display: block;
+}
+.option .checkmark:after{
+    content: "";
+	width: 10px;
+    height: 10px;
+    display: block;
+	background: white;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 300ms ease-in-out 0s;
+}
+.option input[type="radio"]:checked ~ .checkmark{
+    background: #21bf73;
+    transition: 300ms ease-in-out 0s;
+}
+.option input[type="radio"]:checked ~ .checkmark:after{
+    transform: translate(-50%,-50%) scale(1);
+}
+.option input[type="radio"]:checked + .options{
+    background-color: red;
+}
+#account input{
+    border: none;
+    outline: none;
+    padding-top: 2px;
+    padding-left: 25px;
+}
+#account p{
+    padding-top: 4px;
+    padding-left: 25px;
+}
+.btn{
+    background: #fff;
+    color: #21bf73;
+    border: 1px solid #21bf73;
+    width: 85%;
+    padding: 12px;
+}
+.btn:hover{
+    background-color: #21bf73;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.update {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+@media(min-width:768px) and (max-width:991px){
+    .option{
+        padding-left: 30px;
+    }
+}
+@media(min-width:576px)and (max-width:767px){
+    .income{
+        width: 32%;
+    }
+    #or{
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    .btn{
+        width: 100%;
+    }
+    .col{
+        width: 15%;
+    }
+    .day .option{
+        padding-left: 30px;
+    }
+    .day{
+        padding-right: 10px;
+    }
+}
+@media(min-width:300px)and (max-width:575px){
+    .income{
+        width: 60%;
+    }
+    #or{
+        display: block;
+        padding-top: 5px;
+        text-align: center;
+    }
+    .btn{
+        width: 100%;
+    }
+    .day .option .checkmark{
+        width: 20px;
+        height: 20px;
+        top: 2px;
+    }
+    .day .option .checkmark::after{
+        width: 8px;
+        height: 8px;
+        left: 53%;
+        top: 53%;
+    }
+}
